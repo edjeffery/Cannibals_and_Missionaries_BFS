@@ -1,3 +1,5 @@
+from Node import Node
+
 class Game:
     def __init__(self):
         self.initial_node = Node(missionaries_wrong_side=3, cannibals_wrong_side=3, boat_wrong_side=1)
