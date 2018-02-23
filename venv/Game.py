@@ -1,10 +1,20 @@
 from Node import Node
 
 class Game:
+
+    """ Creates a Cannibals and Missionaries game
+
+    Attributes:
+        initial_node: The starting node of the problem, with all characters and boat on the left-hand side of the river
+
+    """
+
     def __init__(self):
+        """Initialises first node with starting positions"""
         self.initial_node = Node(missionaries_wrong_side=3, cannibals_wrong_side=3, boat_wrong_side=1)
 
     def breadth_first_search(self):
+        """BFS algorithm that explores until goal node is found"""
         if self.initial_node.is_goal_state():
             return self.initial_node
         frontier = []
